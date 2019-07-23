@@ -1,0 +1,29 @@
+.ql-snow {
+  .quill-position-placeholder {
+    background-size: 100% 100%;
+    width: 30px;
+    min-height: 40px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: attr(data-value);
+      top: 10px;
+      left: 30px;
+    }
+  }
+
+  .ql-position-placeholder-tooltip {
+    &::before {
+      content: "设置高度";
+    }
+
+    input[type=text] {
+      display: inline;
+    }
+
+    a.ql-action::after {
+      content: "确认";
+    }
+  }
+}
